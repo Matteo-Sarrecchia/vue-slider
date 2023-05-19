@@ -8,7 +8,7 @@ body{
     background-color: blue;
 }
 
-main{
+#app{
     display: flex;
     justify-content: center;
 }
@@ -32,7 +32,7 @@ main{
     border-radius: 20px;
     margin: auto;
     position: relative;
-    border: 1px solid white;
+    border: 3px solid orange;
     /* display: none; */
 }
 
@@ -42,7 +42,6 @@ main{
     display: block;
     border-radius: 20px;
     padding: 10px;
-    border: 1px solid white;
 }
 
 .item h2, .item div{
@@ -67,11 +66,11 @@ main{
 }
 
 .active{
-    display: block;
+    border: 6px solid orange;
 }
 
 .hidden{
-    display: none;
+    
 }
 
 /* tasti per scorrimento manuale */
@@ -150,8 +149,9 @@ main{
 #container-thumb img{
     width: 250px;
     height: 120px;
-   border-radius: 20px;
-   border: 2px solid white;
+    border-radius: 20px;
+    /* border: 2px solid white; */
+    display: block;
 }
 
 .opacity{

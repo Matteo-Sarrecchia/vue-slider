@@ -12,37 +12,40 @@
 
     <main>
 
-        <!-- container principale -->
-        <div id="container">
-            <!-- tasti per scorrimento manuale -->
-            <div class="arrowNext" @click='nextImg'>
-                <i class="fa-sharp fa-solid fa-angle-right" style="color: #ffffff;"></i>
-            </div>
-            <div class="arrowPrev" @click="prevImg">
-                <i class="fa-sharp fa-solid fa-angle-right fa-rotate-180" style="color: #ffffff;"></i>
-            </div>
-            <div class="item" >
-                <img :src="images[positionItem].image" alt="">
-            </div>
+        <div id="app">
+            <!-- container principale -->
+            <div id="container">
+                <!-- tasti per scorrimento manuale -->
+                <div class="arrowNext" @click='nextImg'>
+                    <i class="fa-sharp fa-solid fa-angle-right" style="color: #ffffff;"></i>
+                </div>
+                <div class="arrowPrev" @click="prevImg">
+                    <i class="fa-sharp fa-solid fa-angle-right fa-rotate-180" style="color: #ffffff;"></i>
+                </div>
+                <div class="item" >
+                    <img :src="images[positionItem].image" alt="">
+                </div>
 
 
-            <!-- tasti play/stop/inversione per scorrimento automatico -->
-            <div class="arrowPlay">
-                <i class="fa-solid fa-play fa-2xs" style="color: #ffffff;"></i>
-            </div>
-            <div class="arrowStop">
-                <i class="fa-solid fa-stop fa-2xs" style="color: #ffffff;"></i>
-            </div>
-            <div class="arrowInverse">
-                <i class="fa-solid fa-play fa-rotate-180 fa-2xs" style="color: #ffffff;"></i>
+                <!-- tasti play/stop/inversione per scorrimento automatico -->
+                <div class="arrowPlay">
+                    <i class="fa-solid fa-play fa-2xs" style="color: #ffffff;"></i>
+                </div>
+                <div class="arrowStop">
+                    <i class="fa-solid fa-stop fa-2xs" style="color: #ffffff;"></i>
+                </div>
+                <div class="arrowInverse">
+                    <i class="fa-solid fa-play fa-rotate-180 fa-2xs" style="color: #ffffff;"></i>
+                </div>
+
+                
             </div>
 
-            
+            <div id="container-thumb">
+                <img v-for="(img, index) in images" :src="img.image" alt="" :class="positionItem === index ? 'active' : '' ">
+            </div>
         </div>
-
-        <!-- <div id="container-thumb">
-            <img v-for="img in images" :src="img.image" alt="">
-        </div> -->
+        
 
     </main>   
 

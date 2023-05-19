@@ -46,7 +46,7 @@ createApp ({
             }
         }
     }
-}).mount("#container");
+}).mount("#app");
 
 
 // // creo elementi thumb
