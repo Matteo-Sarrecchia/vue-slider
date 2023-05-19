@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: blue;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+/* container */
+#container{
+    width: 600px;
+    height: 600px;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #043849;
+    border-radius: 20px;
+}
+
+/* item e contenuto */
+.item{
+    min-height: 100px;
+    width: 600px;
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    border: 1px solid white;
+    /* display: none; */
+}
+
+.item img{
+    width: 600px;
+    max-height: 600px;
+    display: block;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.item h2, .item div{
+    position: absolute;
+    z-index: 900;
+    color: white;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+}
+
+.item h2{
+    bottom: 70px;
+    right: 20px;
+}
+
+.item div{
+    bottom: 20px;
+    right: 20px;
+    text-align: end;
+    width: 90%;
+}
+
+.active{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+/* tasti per scorrimento manuale */
+.arrowNext, .arrowPrev{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.arrowNext{
+        z-index: 899;
+        top: 200px;
+        right: 20px;
+}
+
+.arrowPrev{
+    z-index: 899;
+    top: 200px;
+    left: 20px;
+}
+
+/* tasti play stop per scorrimento automatico */
+.arrowPlay, .arrowStop, .arrowInverse{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    z-index: 850;
+}
+
+.arrowPlay{
+    top: 20px;
+    left: 100px;
+}
+
+.arrowStop{
+    top: 20px;
+    left: 60px;
+}
+
+.arrowInverse{
+    top: 20px;
+    left: 20px;
+}
+
+/* container-thumb */
+#container-thumb{
+    height: 600px;
+    width: 250px;
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.itemThumb{
+    width: 100%;
+    height: calc(100% / 5);
+    position: relative;
+}
+
+#container-thumb img{
+    width: 250px;
+    height: 120px;
+   border-radius: 20px;
+   border: 2px solid white;
+}
+
+.opacity{
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+}
